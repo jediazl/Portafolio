@@ -404,7 +404,7 @@
 			});
 		}, { rootMargin: '-45% 0px -50% 0px' });
 
-		Object.keys(byId).forEach(function (id) {
+		Object.keys(byId).concat('header').forEach(function (id) {
 			var section = document.getElementById(id);
 			if (section) observer.observe(section);
 		});

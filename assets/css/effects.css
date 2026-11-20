@@ -309,6 +309,7 @@ body::after {
 #header h1 .glitch::before,
 #header h1 .glitch::after {
 	content: attr(data-text);
+	content: attr(data-text) / "";
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -943,7 +944,10 @@ html:not(.js-fx) .timeline::after {
 	#scroll-progress,
 	#hero-canvas,
 	.fx-scanlines,
-	.fx-cursor {
+	.fx-cursor,
+	#header::after,
+	#header .image.phone::before,
+	#header .image.phone .inner::after {
 		display: none;
 	}
 
