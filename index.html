@@ -20,7 +20,17 @@
 
 	<meta property="og:type" content="website" />
 
+	<meta name="theme-color" content="#05080d" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@600;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" />
+
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/effects.css" />
+
+	<script>document.documentElement.classList.add('js-fx');</script>
 
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
@@ -29,6 +39,8 @@
 
 
 <body class="is-preload">
+
+	<div id="scroll-progress" aria-hidden="true"></div>
 
 
 	<!-- ========================================= -->
@@ -40,7 +52,7 @@
 		<div class="nav-container">
 
 			<a href="#header" class="nav-logo" aria-label="Inicio">
-				🖥
+				JD
 			</a>
 
 			<ul class="nav-links">
@@ -86,16 +98,19 @@
 
 	<header id="header">
 
+		<canvas id="hero-canvas" aria-hidden="true"></canvas>
+
 		<div class="content">
 
 			<span class="eyebrow">
-				INGENIERO EN SISTEMAS COMPUTACIONALES
+				<span class="sr-only">Ingeniero en Sistemas Computacionales</span>
+				<span aria-hidden="true"><span data-typed='["INGENIERO EN SISTEMAS COMPUTACIONALES", "QA · PRODUCCIÓN · DEVOPS", "DEVSECOPS Y SEGURIDAD", "INFRAESTRUCTURA Y SOPORTE TI"]'>INGENIERO EN SISTEMAS COMPUTACIONALES</span><span class="typed-caret"></span></span>
 			</span>
 
 
 			<h1>
 				Jesús<br />
-				<span>Díaz Luna</span>
+				<span class="glitch" data-text="Díaz Luna">Díaz Luna</span>
 			</h1>
 
 
@@ -156,6 +171,11 @@
 
 				<img src="images/pp.jpg"
 					alt="Jesús Díaz Luna" />
+
+				<div class="hud-badge" aria-hidden="true">
+					<span class="hud-dot"></span>
+					SYSTEM ONLINE
+				</div>
 
 			</div>
 
@@ -1771,6 +1791,7 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/effects.js"></script>
 
 
 </body>
