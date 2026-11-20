@@ -926,3 +926,25 @@ html:not(.js-fx) .timeline::after {
 	}
 
 }
+
+
+/* =========================================================
+   IMPRESIÓN
+   ========================================================= */
+
+@media print {
+
+	.js-fx .reveal {
+		opacity: 1;
+		translate: none;
+		filter: none;
+	}
+
+	#scroll-progress,
+	#hero-canvas,
+	.fx-scanlines,
+	.fx-cursor {
+		display: none;
+	}
+
+}
