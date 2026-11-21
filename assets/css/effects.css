@@ -885,6 +885,33 @@ html:not(.js-fx) .timeline::after {
 
 @media screen and (max-width: 736px) {
 
+	/* La navegación ya no desaparece en móvil: se vuelve compacta
+	   y desplazable horizontalmente. */
+	#nav {
+		display: block;
+		padding: 0.6rem 1rem;
+	}
+
+	.nav-container {
+		gap: 1rem;
+	}
+
+	.nav-links {
+		flex-wrap: nowrap;
+		gap: 1rem;
+		overflow-x: auto;
+		scrollbar-width: none;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.nav-links::-webkit-scrollbar {
+		display: none;
+	}
+
+	.nav-links a {
+		white-space: nowrap;
+	}
+
 	#header h1 {
 		font-size: clamp(2.2rem, 10vw, 3rem);
 	}
@@ -951,4 +978,54 @@ html:not(.js-fx) .timeline::after {
 		display: none;
 	}
 
+}
+
+
+/* =========================================================
+   MEJORAS 2026-11-21
+   Contacto centrado, menos aire antes de Contacto,
+   iconos que se envuelven, legibilidad de PROGRAMET
+   y enlaces "Ver sitio" de las tarjetas de proyecto.
+   ========================================================= */
+
+/* Botones de Contacto centrados también en escritorio. */
+#contact .actions {
+	justify-content: center;
+}
+
+/* Los iconos de contacto pueden envolverse en pantallas angostas. */
+.contact-icons {
+	flex-wrap: wrap;
+}
+
+/* Menos aire antes de la sección Contacto. */
+#contact {
+	padding-top: 4rem;
+}
+
+/* PROGRAMET: su texto viene horneado en la imagen, oscuro sobre
+   fondo ocupado. Se aclara la imagen y se suaviza el velo. */
+.project-image--bright img {
+	filter: brightness(1.12) contrast(1.05);
+}
+
+.project-image--bright::after {
+	background:
+		linear-gradient(180deg, transparent 45%, rgba(8, 12, 18, 0.55)),
+		radial-gradient(ellipse at 50% 68%, rgba(255, 255, 255, 0.14), transparent 60%);
+}
+
+/* Enlaces "Ver sitio" / "Jugar" de las tarjetas de proyecto. */
+.project-link {
+	display: inline-block;
+	margin-top: 0.9rem;
+	color: var(--neon);
+	font-family: var(--font-mono);
+	font-size: 0.72rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.project-link:hover {
+	color: #ffffff;
 }
